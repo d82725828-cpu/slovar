@@ -1,0 +1,125 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polyglot — Learn Languages</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>🌍 Polyglot</h1>
+    <p>Твой личный помощник в изучении языков</p>
+</header>
+
+<div class="container">
+
+    <section class="welcome">
+        <h2>Привет, путешественник! 👋</h2>
+        <p>Изучай новые языки, запоминай слова и открывай мир!</p>
+    </section>
+
+    <h2>🌐 Выбери язык</h2>
+
+    <section class="languages">
+        <button class="language" onclick="selectLanguage('en')">
+            🇬🇧 Английский
+        </button>
+
+        <button class="language" onclick="selectLanguage('de')">
+            🇩🇪 Немецкий
+        </button>
+
+        <button class="language" onclick="selectLanguage('fr')">
+            🇫🇷 Французский
+        </button>
+
+        <button class="language" onclick="selectLanguage('es')">
+            🇪🇸 Испанский
+        </button>
+    </section>
+
+    <section class="panel">
+        <h2>📚 Изучение слов</h2>
+
+        <p id="languageName">Сначала выбери язык</p>
+
+        <div id="learning" class="hidden">
+            <div class="word-card">
+                <p class="small">Новое слово</p>
+
+                <div class="word" id="word">Hello</div>
+
+                <div class="translation" id="translation">
+                    Привет
+                </div>
+
+                <p class="small" id="pronunciation"></p>
+
+                <button class="main-btn" onclick="speakWord()">
+                    🔊 Произношение
+                </button>
+
+                <button class="main-btn" onclick="nextWord()">
+                    Следующее слово ➜
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>🧠 Проверка знаний</h2>
+
+        <p id="quizQuestion">Выбери язык, чтобы начать тест.</p>
+
+        <div id="quizOptions" class="options"></div>
+
+        <p id="feedback" class="feedback"></p>
+
+        <button class="main-btn" id="quizButton"
+            onclick="nextQuestion()" disabled>
+            Следующий вопрос
+        </button>
+    </section>
+
+    <section class="panel">
+        <h2>🏆 Мой прогресс</h2>
+
+        <div class="stats">
+            <div class="stat">
+                <strong id="wordsLearned">0</strong>
+                <span>Слов изучено</span>
+            </div>
+
+            <div class="stat">
+                <strong id="level">1</strong>
+                <span>Уровень</span>
+            </div>
+
+            <div class="stat">
+                <strong id="xp">0</strong>
+                <span>Опыт XP</span>
+            </div>
+        </div>
+
+        <p style="margin-top:20px">Прогресс до следующего уровня</p>
+
+        <div class="progress">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    Polyglot © 2026 | Учись каждый день 🌍
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
